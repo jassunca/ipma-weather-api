@@ -12,7 +12,7 @@ public class IPMAInfoClassWindSpeed {
 
     private String owner;
     private String country;
-    private List<IPMAInfoClassWindSpeedData> data; /* Array that contains the list of wind speed classes */
+    private List<IPMAInfoClassWindSpeedData> data; /* List that contains the list of wind speed classes */
 
     //Constructors
 
@@ -68,15 +68,15 @@ public class IPMAInfoClassWindSpeed {
 
     /**
      * Fetches and returns the Portuguese description of the wind speed class on its data array, that matches
-     * the id supplied. If the id is not found, it returns 'N/A'
+     * the id supplied. If the id is not found, it returns 'N/D'
      * @param id A string containing the id to fetch on the wind speed class data array
-     * @return The Portuguese description of the matching wind speed class, or 'N/A' if not found
+     * @return The Portuguese description of the matching wind speed class, or 'N/D' if not found
      */
     public String getDescFromIdPT(String id) {
         for (IPMAInfoClassWindSpeedData d : data) {
             if (d.getClassWindSpeed().equals(id))
                 return d.getDescClassWindSpeedDailyPT();
         }
-        return "N/A";
+        return "N/D";
     }
 }

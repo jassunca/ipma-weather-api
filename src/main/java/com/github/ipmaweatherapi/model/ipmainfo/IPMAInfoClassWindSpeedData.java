@@ -4,6 +4,7 @@ package com.github.ipmaweatherapi.model.ipmainfo;
  * IPMAInfoClassWindSpeedData - This class stores information about a given wind speed classification,
  * which follows the format for wind speeds fetched from the public IPMA API, available at:
  * <a href="https://api.ipma.pt/open-data/wind-speed-daily-classe.json">...</a>
+ * Regarding the wind speed id, this value is received from the IPMA api in String format.
  * @author João Assunção
  */
 public class IPMAInfoClassWindSpeedData {

@@ -39,7 +39,7 @@ public class IPMAInfoClassWindSpeedTest {
     }
 
     @Test
-    public void testThatNonexistentWindClassIDReturnsCorrectENNotFoundDescription() {
+    public void testThatNonexistentWindClassIDReturnsENDescriptionNotFound() {
         String id = "6";
         String expected = "N/A";
         String result = ipmaInfoClassWindSpeed.getDescFromIdEN(id);
@@ -57,9 +57,9 @@ public class IPMAInfoClassWindSpeedTest {
     }
 
     @Test
-    public void testThatNonexistentWindClassIDReturnsCorrectPTNotFoundDescription() {
+    public void testThatNonexistentWindClassIDReturnsPTDescriptionNotFound() {
         String id = "8";
-        String expected = "N/A";
+        String expected = "N/D";
         String result = ipmaInfoClassWindSpeed.getDescFromIdPT(id);
 
         assertThat(result).isEqualTo(expected);
