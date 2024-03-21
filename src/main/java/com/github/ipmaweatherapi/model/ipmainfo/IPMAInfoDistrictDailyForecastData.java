@@ -17,7 +17,7 @@ public class IPMAInfoDistrictDailyForecastData {
     private String tMax; //highest temperature
     private String predWindDir; //wind direction
     private Long idWeatherType; //id for the forecast's weather type
-    /*id for the wind speed class. IPMA sends this in numeric format, while this id in the wind speed class list data
+    /*id for the wind speed class. IPMA sends this one in numeric format, while the id in the wind speed class data list
     * is sent as a text string.*/
     private Long classWindSpeed;
     private String longitude;

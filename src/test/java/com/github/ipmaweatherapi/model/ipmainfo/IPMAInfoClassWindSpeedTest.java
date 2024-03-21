@@ -1,5 +1,6 @@
 package com.github.ipmaweatherapi.model.ipmainfo;
 
+import com.github.ipmaweatherapi.utils.TestDataProvider;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -22,11 +23,7 @@ public class IPMAInfoClassWindSpeedTest {
 
     @BeforeAll
     public void populateIPMAInfoClassWindSpeed() {
-        ipmaInfoClassWindSpeed = new IPMAInfoClassWindSpeed("IPMA", "PT", new ArrayList<>());
-        ipmaInfoClassWindSpeed.getData().add(new IPMAInfoClassWindSpeedData("Weak", "Fraco", "1"));
-        ipmaInfoClassWindSpeed.getData().add(new IPMAInfoClassWindSpeedData("Moderate", "Moderado", "2"));
-        ipmaInfoClassWindSpeed.getData().add(new IPMAInfoClassWindSpeedData("Strong", "Forte", "3"));
-        ipmaInfoClassWindSpeed.getData().add(new IPMAInfoClassWindSpeedData("Very Strong", "Muito Forte", "4"));
+        ipmaInfoClassWindSpeed = TestDataProvider.createIPMAInfoClassWindSpeed();
     }
 
     @Test
@@ -49,8 +46,8 @@ public class IPMAInfoClassWindSpeedTest {
 
     @Test
     public void testThatExistentWindClassIDReturnsCorrectPTDescription() {
-        String id = "4";
-        String expected = "Muito Forte";
+        String id = "2";
+        String expected = "Moderado";
         String result = ipmaInfoClassWindSpeed.getDescFromIdPT(id);
 
         assertThat(result).isEqualTo(expected);

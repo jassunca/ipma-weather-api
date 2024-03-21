@@ -1,5 +1,6 @@
 package com.github.ipmaweatherapi.model.ipmainfo;
 
+import com.github.ipmaweatherapi.utils.TestDataProvider;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -22,9 +23,7 @@ public class IPMAInfoWeatherTypeTest {
 
     @BeforeAll
     public void populateIPMAInfoWeatherType() {
-        ipmaInfoWeatherType = new IPMAInfoWeatherType("IPMA", "PT", new ArrayList<>());
-        ipmaInfoWeatherType.getData().add(new IPMAInfoWeatherTypeData("Clear sky", "Céu limpo", 1L));
-        ipmaInfoWeatherType.getData().add(new IPMAInfoWeatherTypeData("Partly cloudy", "Céu pouco nublado", 2L));
+        ipmaInfoWeatherType = TestDataProvider.createIPMAInfoWeatherType();
     }
 
     @Test
